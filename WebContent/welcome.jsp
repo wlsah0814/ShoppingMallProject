@@ -1,3 +1,5 @@
+<%-- welcome 페이지에서는 쇼핑몰의 가장 첫 시작 페이지이고, 
+	 setIntHeader() 메소드를 사용하여 5초마다 새로고침 시킨다. --%>
 <%@ page contentType="text/html; charset=utf-8"%>
 <html>
 <head>

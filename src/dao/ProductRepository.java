@@ -1,14 +1,23 @@
+//ProductRespnsitory.java 파일은 Product의 생성자를 가지고 
+//상품 아이디, 이름, 가격의 값을 입력하고 Product의 각 메소드들의 값을 설정할 수 있다.
+
+
 package dao;
 
 import java.util.ArrayList;
 
 import dto.Product;
 
-public class ProductRespnsitory {
+public class ProductRepository {
 
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
+	private static ProductRepository instance = new ProductRepository();
 	
-	public ProductRespnsitory() {
+	public static ProductRepository getInstance() {
+		return instance;
+	}
+	
+	public ProductRepository() {
 		
 		Product phone = new  Product("p1234", "iPhone 12", 1000000);
 		phone.setDescription("6.1-inch, 2532X1170 Super Retina XDR display, 듀얼 12MP 카메라");
@@ -51,5 +60,9 @@ public class ProductRespnsitory {
 			}
 		}
 		return productById;
+	}
+	
+	public void addProduct(Product product) {
+		listOfProducts.add(product);
 	}
 }

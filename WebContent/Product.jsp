@@ -1,6 +1,8 @@
+<%--Product.jsp는 ProductRespnsitory의 상품 설정 값들을 가져와서 
+ 	페이지에 출력한다. --%>
 <%@ page contentType="text/html; charset=utf-8"%>  
 <%@ page import = "dto.Product" %>
-<jsp:useBean id = "ProductDAO" class ="dao.ProductRespnsitory" scope ="session" />  
+<%@ page import = "dao.ProductRepository" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +18,8 @@
 	</div>
 	<% 
 		String id = request.getParameter("id");
-		Product product = ProductDAO.getProductById(id);
+		ProductRepository dao = ProductRepository.getInstance();
+		Product product = dao.getProductById(id);
 	%>
 	<div class = "container">
 		<div class = "row">

@@ -1,7 +1,9 @@
+<%-- ProductRespnsitory.java에서 사용된 ArrayList<Product>의 값들을
+	 가져와서 상품의 이름, 가격, 제조사를 출력하고 상세정보로 넘어가는 버튼을 포함하고 있다. --%>
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "dto.Product" %>
-<jsp:useBean id = "ProductDAO" class ="dao.ProductRespnsitory" scope ="session" />
+<%@ page import = "dao.ProductRepository" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +14,13 @@
 <body>
 	<jsp:include page = "menu.jsp"/>
 	<div class ="jumbotron">
-		<div class ="container"/>
-			<h1 class ="display-3"></h1>
+		<div class ="container">
+			<h1 class ="display-3">상품 목록</h1>
 		</div>
 	</div>
 	<%
-		ArrayList<Product> listOfProducts = ProductDAO.getAllProducts(); 
+		ProductRepository dao = ProductRepository.getInstance();
+		ArrayList<Product> listOfProducts = dao.getAllProducts(); 
 	%>
 	
 	

@@ -1,3 +1,7 @@
+//Product.java 파일은 상품 아이디, 상품명, 상품 가격 등의 속성과 
+//get, set 메소드를 포함하고 있고 또한 ProductRepository JavaBeans 클래스에게 
+//상품의 속성 값을 추가하기 위한 메소드를 제공한다. 
+
 package dto;
 
 import java.io.Serializable;
