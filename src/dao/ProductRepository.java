@@ -25,20 +25,24 @@ public class ProductRepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
+		phone.setFilename("p1234.jpg");
 		
 		Product notebook = new Product("p1235", "LG PC ±×·¥", 1500000);
-		phone.setDescription("13.3-inch, IPS LED display, 5rd Generation Intel Core Processors");
-		phone.setCategory("Notebook");
-		phone.setManufacturer("LG");
-		phone.setUnitsInStock(1000);
-		phone.setCondition("Refurbished");
+		notebook.setDescription("13.3-inch, IPS LED display, 5rd Generation Intel Core Processors");
+		notebook.setCategory("Notebook");
+		notebook.setManufacturer("LG");
+		notebook.setUnitsInStock(1000);
+		notebook.setCondition("Refurbished");
+		notebook.setFilename("p1236.jpg");
 		
 		Product tablet = new Product("p1236", "Galaxy Tap 5", 900000);
-		phone.setDescription("212.8*125.6*6.6mm, Super AMOLED display, Octa-Core Processors");
-		phone.setCategory("Tablet");
-		phone.setManufacturer("Samsung");
-		phone.setUnitsInStock(1000);
-		phone.setCondition("Old");
+		tablet.setDescription("212.8*125.6*6.6mm, Super AMOLED display, Octa-Core Processors");
+		tablet.setCategory("Tablet");
+		tablet.setManufacturer("Samsung");
+		tablet.setUnitsInStock(1000);
+		tablet.setCondition("Old");
+		tablet.setFilename("p1235.jpg");
+		
 		
 		listOfProducts.add(phone);
 		listOfProducts.add(notebook);
